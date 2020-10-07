@@ -1,0 +1,262 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+/* 
+body{
+    position: fixed;  
+    overflow-y: hidden;
+    width: 100%;
+}  */
+
+.background-image{
+    /* background-position: initial; */
+    background-image: 100%;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 14vh;
+    background-color:#2619B2;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+.logo a{
+    color: #ffd209;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 36px;
+    font-weight: bolder;
+    text-decoration: none;
+  
+}  
+
+
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    height: 3vh;
+    list-style-type: none;
+}
+
+.nav-links a{
+    color: #ffd209;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 24px;
+    width: 70%;
+   
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #2619B2;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+
+   .nav-links{
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 8vh;
+       background-color: #ee9797;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 50%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+       
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-avtive{
+    transform: translateX(0%);
+}
+
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+
+    }to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg ) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate( 45deg ) translate(-5px, -6px );
+}
+
+
+
+
+
+.footer ul {
+    display: inline-grid;
+    grid-auto-flow: row;
+    list-style-type: none;
+    grid-gap: 24px;
+    justify-items: center;
+    margin: auto;
+    bottom: 10pt;
+    left: 10pt;
+    position: absolute;
+    right: 0;
+  }
+  
+  @media (min-width: 500px) {
+    .footer ul {
+      grid-auto-flow: column;
+    }
+  }
+  
+  .footer a {
+    color: #2619B2;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+  }
+  
+ .footer a:hover {
+    box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+  }
+  
+  .foote li:last-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+ .footer li:hover ~ li p {
+    animation: wave-animation 0.3s infinite;
+  }
+  
+  /* below is just for demo styling */
+  
+  div footer{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #002a38;
+    line-height: 1.3;
+    font-family: Menlo, monospace;
+  }
+  
+  @keyframes wave-animation {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(20deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+  }
+
+
+  .categories{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    min-height: 8vh;
+    
+    background-color: #00FF57;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .categories ul{
+    color: #2619B2;
+    letter-spacing: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+
+  }
+
+  /* .categories li:hover{
+    color: #ee9797;
+    cursor: pointer;
+  } */
+
+  .paragraph {
+    color: #2619B2;
+    letter-spacing: 5px;
+    font-size: 48px;
+    font-weight: bold;
+    vertical-align: text-bottom;
+    min-height: 50em;
+    text-align: center; 
+    margin-top: 13%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+ 
+button{ 
+    position: absolute;
+    margin-top: 28%;
+    margin-left: 75%;
+    box-sizing: border-box;
+    border-radius: 70px;
+    width: 200px;
+    height: 50px;
+    color: #2619B2;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #00FF57;
+
+} 
